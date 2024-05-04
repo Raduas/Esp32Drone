@@ -1,0 +1,47 @@
+const char *HTML_CONTENT = R"=====(
+<!DOCTYPE html>
+<html>
+<head>
+<title>ESP32 Controls Joystick via Web</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<style>
+body { text-align: center; }
+</style>
+<script>
+var ws;
+
+function init()
+{
+  ws = new WebSocket("ws://" + window.location.host + ":81");
+  document.getElementById("ws_state").innerHTML = "CONNECTING";
+
+  ws.onopen  = function(){ document.getElementById("ws_state").innerHTML = "CONNECTED" };
+  ws.onclose = function(){ document.getElementById("ws_state").innerHTML = "CLOSED"};
+  ws.onerror = function(){ alert("websocket error " + this.url) };
+
+  ws.onmessage = ws_onmessage;
+}
+function ws_onmessage(e_msg)
+{
+  e_msg = e_msg || window.event; // MessageEvent
+
+  var joystick = JSON.parse(e_msg.data);
+  document.getElementById("joy_x").innerHTML = joystick.x;
+  document.getElementById("joy_y").innerHTML = joystick.y;
+}
+window.onload = init;
+</script>
+</head>
+<body>
+<h2>
+ESP32 - Joystick Controller via Web<br>
+<p>
+WebSocket : <span id="ws_state" style="color:blue">null</span><br>
+X: <span id="joy_x" style="color:blue">0</span><br>
+Y: <span id="joy_y" style="color:blue">0</span>
+</p>
+</h2>
+<div class="sponsor">Sponsored by <a href="https://amazon.com/diyables">DIYables</a></div>
+</body>
+</html>
+)=====";
