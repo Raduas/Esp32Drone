@@ -16,8 +16,8 @@
 #include "droneControl.h"
 
 
-const char* ssid = "PODA_8643";     // CHANGE IT
-const char* password = "6E982DA3";  // CHANGE IT
+const char* ssid = "ssid";     // CHANGE IT
+const char* password = "pass";  // CHANGE IT
 unsigned long lastTime = 0;
 int8_t power, yaw, pitch, roll;
 const int8_t FL = 16; //PWN Pin for Front Left motor
