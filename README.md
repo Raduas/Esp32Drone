@@ -1,6 +1,6 @@
-# ESP32 drone - Learning project
+# ESP32 drone - Learning project 
 
-This my first bigger project on ESP32.   7,4V (2x 18650 on serial)
+This my first bigger project on ESP32 where i want learn JS,html,csss,C,git.   7,4V (2x 18650 on serial)
 
 v1:
   -motors are scrapped from another dron which didn't work
