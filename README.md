@@ -3,10 +3,10 @@
 This my first bigger project on ESP32 where i want learn JS,html,csss,C,git.   7,4V (2x 18650 on serial)
 
 ## v1:
--motors are scrapped from another dron which didn't work
--developed GUI joystick on websocket which are used for control drone
--basic drive function from power (left joystick Y axis) to PWM which are drive MOSFETS
--first wiring on breadboard
+- motors are scrapped from another dron which didn't work
+- developed GUI joystick on websocket which are used for control drone
+- basic drive function from power (left joystick Y axis) to PWM which are drive MOSFETS
+- first wiring on breadboard
 ![wiring](https://github.com/Raduas/Esp32Drone/assets/132930440/7a02ebf6-6ee3-4504-9424-6128533ae537)
 ![20240506_161926](https://github.com/Raduas/Esp32Drone/assets/132930440/97d4a129-2191-464c-aaa6-facb362948c3)
 
@@ -19,16 +19,16 @@ This my first bigger project on ESP32 where i want learn JS,html,csss,C,git.   7
 motors are works as i want, but printed body with breadboard are too heavy for lift.
 
 ## v2: -on proggress
--from breaboard moved to soldering field
--new 3D printed body (2 top and bottom layers, 1 perimeters, 0% infill)
---made from atleas 4 part which are connect by adhesive
+- from breaboard moved to soldering field
+- new 3D printed body (2 top and bottom layers, 1 perimeters, 0% infill)
+-- made from atleas 4 part which are connect by adhesive
     
 ## what next:
   ### on v2:
-  -control function for roll, yaw, pitch 
+  - control function for roll, yaw, pitch 
   ### on v3:
-  -IMU for self stabilization
+  - IMU for self stabilization
 
      
-vision for next upgrade on next versions
-  -Doppler radar + gps for Autonomous drive to point
+## vision for next upgrade on next versions
+  - Doppler radar + gps for Autonomous drive to point
